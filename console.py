@@ -10,7 +10,7 @@ import re
 
 class HBNBCommand(cmd.Cmd):
     "Class of my command intepreter"
-    prompt = "(hnnb) "
+    prompt = "(hbnb) "
 
     def do_quit(self, line):
         """Quit command to exit the program"""
@@ -22,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """Override default empty line"""
-        return False
+        pass
 
     def do_create(self, line):
         """Create a new instance of Basemodel"""
@@ -109,7 +109,7 @@ class HBNBCommand(cmd.Cmd):
         uid = match.group(2)
         attribute = match.group(3)
         value = match.group(4)
-        
+
         if classname not in storage.classes():
             print("** class doesn't exist **")
         elif uid is None:
@@ -131,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         cast = int
                 else:
-                    value = value.replace('"', '')
+                    value = value.replace('"', "")
                 attributes = storage.attributes()[classname]
                 if attribute in attributes:
                     value = attributes[attribute](value)
@@ -139,10 +139,10 @@ class HBNBCommand(cmd.Cmd):
                     try:
                         value = cast(value)
                     except ValueError:
-                        pass 
+                        pass
                 setattr(storage.all()[key], attribute, value)
-                storage.all()[key].save()                       
-        
+                storage.all()[key].save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()

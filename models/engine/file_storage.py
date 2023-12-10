@@ -33,12 +33,13 @@ class FileStorage:
 
         classes = {
             "BaseModel": BaseModel,
-            "User":User,
-            "State":State,
-            "City":City,
-            "Amenity":Amenity,
-            "Place":Place,
-            "Review":Review}
+            "User": User,
+            "State": State,
+            "City": City,
+            "Amenity": Amenity,
+            "Place": Place,
+            "Review": Review,
+        }
         return classes
 
     def save(self):
@@ -53,7 +54,9 @@ class FileStorage:
             return
         with open(FileStorage.__file_path, "r", encoding="utf-8") as file:
             dict_object = json.load(file)
-            dict_object = {k: self.classes()[v["__class__"]](**v) for k, v in dict_object.items()}
+            dict_object = {
+                k: self.classes()[v["__class__"]](**v) for k, v in dict_object.items()
+            }
             FileStorage.__objects = dict_object
 
     def attributes(self):
