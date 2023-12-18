@@ -2,12 +2,12 @@ header {
     height:70px;
     width:100%;
     border-bottom: 1px solid #CCCCCC;
-    display: flex;
-    position: fixed;
     left: 0;
     background-image: url('https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png');
     background-size: contain;
     background-position: 20px left;
     background-repeat: no-repeat;
     background-color: white;
+    margin-left: 0;
+    padding-left: 0;
 }
