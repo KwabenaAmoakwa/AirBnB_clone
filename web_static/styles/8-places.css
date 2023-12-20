@@ -30,5 +30,57 @@
     min-width: 60px;
     height: 60px;
     font-size: 30px;
+    display: inline;
+  
+}
+.information {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    height: 80px;
+    justify-content: space-between;
+}
+article h2{
     display: inline-block;
 }
+
+.max_guest, .number_rooms, .number_bathrooms{
+    width: 100px;
+    font-size: 12px;
+    align-items: end;
+    justify-content: center;
+}
+
+.max_guest {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png);
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.number_rooms {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png);
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.number_bathrooms {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png);
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.user {
+    font-size: 13px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.description {
+    margin-top: 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+
