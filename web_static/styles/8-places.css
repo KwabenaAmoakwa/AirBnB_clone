@@ -42,6 +42,12 @@
 article h2{
     display: inline-block;
 }
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .max_guest, .number_rooms, .number_bathrooms{
     width: 100px;
@@ -81,6 +87,14 @@ article h2{
     margin-top: 0;
     font-size: 12px;
     text-align: left;
+}
+.com {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 
